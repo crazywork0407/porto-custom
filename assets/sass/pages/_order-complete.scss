@@ -1,0 +1,242 @@
+/* Order Complete */
+.navigation-wrapper {
+    .navigation {
+        display: inline-flex;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 700;
+        i {
+            font-size: 20px;
+        }
+
+        color: #222529;
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.order-complete {
+    .complete-message {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+
+    .order-id {
+        font-size: 20px;
+        color: #222529;
+    }
+}
+
+.order-complete-image {
+    img {
+        margin: 0 auto;
+    }
+}
+
+.order-description {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+
+    b {
+        color: #222529;
+    }
+}
+
+.order-actions {
+    .btn {
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+.order-info-wrapper {
+    .order-print {
+        text-decoration: underline !important;
+    }
+    
+    .order-status {
+        font-size: 15px;
+    }
+    
+    .order-info {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid #e1e1e1;
+
+        > * {
+            padding: 40px;
+            flex: 0 0 100%;
+            max-width: 100%;
+            text-align: center;
+                
+            &:not(:last-child) {
+                border-bottom: 1px solid #e1e1e1;
+            }
+        }
+
+        @include mq(sm) {
+            > * {
+                padding: 40px;
+                flex: 0 0 33.3333%;
+                max-width: 33.3333%;
+                text-align: left;
+                
+                &:not(:last-child) {
+                    border-bottom: none;
+                    border-right: 1px solid #e1e1e1;
+                }
+            }
+        }
+
+        p {
+            margin-bottom: 5px;
+            // Order Information Text Style
+            color: #222529;
+        }
+    }
+
+    .info-icon {
+        margin-bottom: 15px;
+        font-size: 24px;
+    }
+}
+
+.order-list {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #222529;
+
+    h3 {
+        padding-bottom: 10px;
+        font-size: 24px;
+        border-bottom: 1px solid #e1e1e1;
+    }
+
+    .order-media {
+        display: flex;
+        margin-bottom: 20px;
+
+        .order-title {
+            margin-bottom: 0;
+            padding-top: 5px;
+            padding-left: 20px;
+        }
+    }
+
+    .order-item {
+        & + .order-item {
+            margin-top: 30px;
+            padding-top: 40px;
+            border-top: 1px solid #e1ede1;
+        }
+    }
+}
+
+.order-prescription {
+    width: 100%;
+    // Prescription Font Style
+    font-size: 15px;
+    color: #222529;
+
+    th:first-child,
+    td:first-child {
+        padding-left: 10px;
+    }
+
+    thead {
+        th {
+            padding: 10px 10px 10px 0;
+            // Table Heading Background Style
+            background-color: #e6f2ff;
+            &:not(:first-child) {
+                text-align: center;
+            }
+        }
+        @include mq(sm) {
+            .subtotal {
+                width: 120px;
+            }
+        }
+        
+    }
+
+    tbody {
+        td, th {
+            padding: 10px 10px 10px 0;
+        }
+
+        td:not(:first-child) {
+            text-align: center;
+        }
+    }
+
+    @include mq(sm, max) {
+        display: flex;
+        thead,
+        tbody,
+        tr,
+        td,
+        th {
+            display: block;
+            text-align: center;
+        }
+
+        thead {
+            max-width: 150px;
+            flex: 175px;
+            th {
+                padding: 10px;
+            }
+        }
+        
+        tbody {
+            display: flex;
+            flex: 0 0 calc(100% - 150px);
+            max-width: calc(100% - 150px);
+            td, th {
+                padding: 10px;
+            }
+            tr {
+                flex: 1;
+            }
+        }
+
+        td, th {
+            min-height: 40px;
+        }
+    }
+
+    &.compact-table {
+        margin-left: auto;
+        max-width: 450px;
+    }
+}
+
+// Order Help Description Text Style
+.order-help-description {
+    @include mq(md) {
+        max-width: 450px;
+    }
+    font-size: 16px;
+    color: #222529;
+    line-height: 1.5;
+}
+
+.order-price {
+    max-width: 270px;
+    @include mq(md) {
+        margin-left: auto;
+    }
+    font-size: 16px;
+    color: #222529;
+
+    label {
+        min-width: 150px;
+        font-family: inherit;
+        font-size: inherit;
+        font-weight: inherit;
+    }
+}
