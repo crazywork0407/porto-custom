@@ -217,7 +217,7 @@
 
 // Order Help Description Text Style
 .order-help-description {
-    @include mq(md) {
+    @include mq(sm) {
         max-width: 450px;
     }
     font-size: 16px;
@@ -226,8 +226,8 @@
 }
 
 .order-price {
-    max-width: 270px;
-    @include mq(md) {
+    max-width: 245px;
+    @include mq(sm) {
         margin-left: auto;
     }
     font-size: 16px;
@@ -238,5 +238,19 @@
         font-family: inherit;
         font-size: inherit;
         font-weight: inherit;
+    }
+}
+
+// For Print
+@media print {
+    .top-notice,
+    .header,
+    .navigation-wrapper,
+    .footer {
+        display: none !important;
+    }
+
+    .complete-message  {
+        margin-top: 100px !important;
     }
 }
